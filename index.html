@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
-<!-- Librería ligera de confeti -->
+<!-- Librería de confeti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <style>
    :root {
@@ -34,7 +34,6 @@
      position: relative;
      padding: 20px 15px 60px 15px;
    }
-   /* Fondo de corazones flotantes decorativos */
    .bg-hearts {
      position: fixed;
      top: 0;
@@ -67,7 +66,6 @@
      align-items: center;
      gap: 24px;
    }
-   /* LETRERO DE BANDERINES */
    .banner-wrapper {
      width: 100%;
      text-align: center;
@@ -95,16 +93,13 @@
      animation: swing 3s infinite ease-in-out alternate;
      transform-origin: top center;
    }
-   .space {
-     width: 16px;
-   }
+   .space { width: 16px; }
    .flag:nth-child(even) { animation-duration: 2.6s; animation-delay: 0.2s; }
    .flag:nth-child(3n) { animation-duration: 3.2s; animation-delay: 0.4s; }
    @keyframes swing {
      0% { transform: rotate(-5deg); }
      100% { transform: rotate(5deg); }
    }
-   /* FOTO POLAROID CON DECORACIONES */
    .photo-card {
      background: white;
      padding: 12px 12px 18px 12px;
@@ -117,9 +112,7 @@
      max-width: 320px;
      width: 100%;
    }
-   .photo-card:hover {
-     transform: rotate(0deg) scale(1.02);
-   }
+   .photo-card:hover { transform: rotate(0deg) scale(1.02); }
    .photo-wrapper {
      position: relative;
      border-radius: 14px;
@@ -141,7 +134,6 @@
    .badge-left { top: -14px; left: -14px; transform: rotate(-15deg); }
    .badge-right { top: -14px; right: -14px; transform: rotate(15deg); }
    .badge-bottom { bottom: -12px; right: -8px; }
-   /* CONTADOR REGRESIVO */
    .countdown-box {
      background: rgba(255, 255, 255, 0.9);
      backdrop-filter: blur(8px);
@@ -184,7 +176,6 @@
      margin-top: 4px;
      text-transform: uppercase;
    }
-   /* MENSAJE DE CUMPLEAÑOS */
    .birthday-alert {
      display: none;
      background: linear-gradient(135deg, #ff758f, #ff4d6d);
@@ -201,7 +192,6 @@
      0% { transform: scale(0.98); }
      100% { transform: scale(1.02); }
    }
-   /* CALENDARIO DE OCTUBRE */
    .calendar-box {
      background: white;
      border-radius: 26px;
@@ -252,35 +242,14 @@
      transition: all 0.2s ease;
      color: #633647;
    }
-   .day.empty {
-     background: transparent;
-   }
-   /* Día tachado */
-   .day.crossed {
-     background: #f1eaed;
-     color: #b59ba4;
-   }
+   .day.empty { background: transparent; }
+   .day.crossed { background: #f1eaed; color: #b59ba4; }
    .day.crossed::after {
-     content: '';
-     position: absolute;
-     width: 75%;
-     height: 3px;
-     background: #ff758f;
-     border-radius: 2px;
-     transform: rotate(-45deg);
-     opacity: 0.85;
+     content: ''; position: absolute; width: 75%; height: 3px; background: #ff758f; border-radius: 2px; transform: rotate(-45deg); opacity: 0.85;
    }
    .day.crossed::before {
-     content: '';
-     position: absolute;
-     width: 75%;
-     height: 3px;
-     background: #ff758f;
-     border-radius: 2px;
-     transform: rotate(45deg);
-     opacity: 0.85;
+     content: ''; position: absolute; width: 75%; height: 3px; background: #ff758f; border-radius: 2px; transform: rotate(45deg); opacity: 0.85;
    }
-   /* Día del cumpleaños (16) */
    .day.birthday {
      background: linear-gradient(135deg, #ff4d6d, #ff758f);
      color: white;
@@ -288,23 +257,9 @@
      animation: heartbeat 1.3s infinite ease-in-out;
      z-index: 2;
    }
-   .day.birthday .heart-bg {
-     position: absolute;
-     font-size: 1.8rem;
-     opacity: 0.28;
-     pointer-events: none;
-   }
-   .day.birthday .bday-num {
-     position: relative;
-     font-size: 1.15rem;
-     font-family: 'Fredoka One', cursive;
-     z-index: 1;
-   }
-   .day.birthday .mini-heart {
-     position: absolute;
-     bottom: 2px;
-     font-size: 0.65rem;
-   }
+   .day.birthday .heart-bg { position: absolute; font-size: 1.8rem; opacity: 0.28; pointer-events: none; }
+   .day.birthday .bday-num { position: relative; font-size: 1.15rem; font-family: 'Fredoka One', cursive; z-index: 1; }
+   .day.birthday .mini-heart { position: absolute; bottom: 2px; font-size: 0.65rem; }
    @keyframes heartbeat {
      0% { transform: scale(1); }
      14% { transform: scale(1.1); }
@@ -312,40 +267,13 @@
      42% { transform: scale(1.1); }
      70% { transform: scale(1); }
    }
-   /* BOTÓN FLOTANTE DE MÚSICA */
-   .music-btn {
-     position: fixed;
-     bottom: 20px;
-     right: 20px;
-     background: var(--rosa-fuerte);
-     color: white;
-     border: none;
-     padding: 12px 18px;
-     border-radius: 30px;
-     display: flex;
-     align-items: center;
-     gap: 8px;
-     font-weight: 800;
-     font-size: 0.9rem;
-     box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
-     cursor: pointer;
-     z-index: 100;
-     transition: all 0.3s;
-   }
-   .music-btn:hover {
-     transform: scale(1.05);
-     background: var(--rosa-oscuro);
-   }
 </style>
 </head>
 <body>
-<!-- Fondo de corazones flotantes -->
 <div class="bg-hearts" id="bgHearts"></div>
 <div class="container">
-<!-- 1. BANDERINES DE CUMPLEAÑOS -->
 <div class="banner-wrapper">
 <div class="banner-string">
-<!-- CUMPLEAÑOS -->
 <div class="flag" style="background: #ff758f;">C</div>
 <div class="flag" style="background: #ffb3c1;">U</div>
 <div class="flag" style="background: #ff4d6d;">M</div>
@@ -357,7 +285,6 @@
 <div class="flag" style="background: #c9184a;">O</div>
 <div class="flag" style="background: #ff85a1;">S</div>
 <div class="space"></div>
-<!-- FLACA -->
 <div class="flag" style="background: #ff4d6d;">F</div>
 <div class="flag" style="background: #ff758f;">L</div>
 <div class="flag" style="background: #ffb3c1;">A</div>
@@ -365,17 +292,15 @@
 <div class="flag" style="background: #ff85a1;">A</div>
 </div>
 </div>
-<!-- FOTO -->
 <div class="photo-card">
 <div class="badge-icon badge-left">🎈</div>
 <div class="badge-icon badge-right">🎂</div>
 <div class="photo-wrapper">
-<!-- Reemplaza foto.png por la foto que quieras si tiene otro nombre -->
-<img src="foto.png" alt="Cumpleaños de Flaca">
+<!-- IMPORTANTE: Asegúrate de que el nombre aquí coincida exactamente con tu foto -->
+<img src="foto.png .JPG" alt="Cumpleaños de Flaca">
 </div>
 <div class="badge-icon badge-bottom">💖</div>
 </div>
-<!-- 2. CONTADOR REGRESIVO -->
 <div class="countdown-box" id="timerBox">
 <div class="countdown-title">⏳ Cuenta regresiva para tu día especial ⏳</div>
 <div class="timer-grid">
@@ -397,69 +322,47 @@
 </div>
 </div>
 </div>
-<!-- AVISO DE CUMPLEAÑOS (SE MUESTRA EL 16 DE OCTUBRE) -->
 <div class="birthday-alert" id="bdayAlert">
      🎉 ¡¡FELIZ CUMPLEAÑOS, FLACA HERMOSA!! 🎂💖<br>
 <span style="font-size: 0.95rem; font-weight: 600;">¡Hoy se festeja por todo lo alto! 🥳🎈</span>
 </div>
-<!-- 3. CALENDARIO DE OCTUBRE -->
 <div class="calendar-box">
 <div class="cal-header">
 <h2><span>📅</span> Octubre 2026</h2>
-<span style="font-size: 0.85rem; font-weight: 800; color: var(--rosa-medio);">16 de Octubre ❤️</span>
+<span style="font-size: 0.85rem; font-weight: 800; color: var(--rosa-medio);">16 de Octubre ❤️️</span>
 </div>
 <div class="cal-days-header">
-<div>DOM</div>
-<div>LUN</div>
-<div>MAR</div>
-<div>MIÉ</div>
-<div>JUE</div>
-<div>VIE</div>
-<div>SÁB</div>
+<div>DOM</div><div>LUN</div><div>MAR</div><div>MIÉ</div><div>JUE</div><div>VIE</div><div>SÁB</div>
 </div>
 <div class="cal-grid" id="calendarGrid"></div>
 </div>
+<!-- Reproductor de Las Mañanitas (Pedro Infante) -->
+<div style="width: 100%; max-width: 400px; margin: 10px auto; text-align: center; position: relative; z-index: 10;">
+<p style="font-weight: 800; color: var(--rosa-oscuro); margin-bottom: 8px;">🎵 Las Mañanitas 🎵</p>
+<iframe src="https://archive.org/embed/78_las-mananitas_pedro-infante-mariachi-los-mamertos_gbia0154742a" width="100%" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="border-radius: 12px; box-shadow: 0 4px 15px rgba(255, 117, 143, 0.2);"></iframe>
 </div>
-<!-- 4. AUDIO DE LAS MAÑANITAS -->
-<!-- Coloca tu archivo mananitas.mp3 en la misma carpeta o añade aquí la URL directa -->
-<audio id="mananitasAudio" preload="auto">
-<source src="mananitas.mp3" type="audio/mp3">
-</audio>
-<button class="music-btn" id="musicToggleBtn" onclick="toggleAudio()">
-<span id="musicIcon">🎵</span>
-<span id="musicText">Las Mañanitas</span>
-</button>
+</div>
 <script>
-   // Configuración de fecha objetivo: 16 de Octubre de 2026 00:00:00
    const TARGET_YEAR = 2026;
-   const TARGET_MONTH = 9; // Octubre (0-indexado: 0 es enero, 9 es octubre)
+   const TARGET_MONTH = 9;
    const TARGET_DAY = 16;
    const targetDate = new Date(TARGET_YEAR, TARGET_MONTH, TARGET_DAY, 0, 0, 0).getTime();
-   // 1. GENERACIÓN DEL CALENDARIO DINÁMICO
    function buildCalendar() {
      const grid = document.getElementById('calendarGrid');
      const now = new Date();
-     const currentYear = now.getFullYear();
-     const currentMonth = now.getMonth();
-     const currentDay = now.getDate();
-     // Octubre 2026 comienza en Jueves (índice 4: Domingo=0, Lunes=1, ...)
      const firstDayIndex = new Date(TARGET_YEAR, TARGET_MONTH, 1).getDay();
      const daysInOctober = 31;
-     // Celdas vacías previas al día 1
      for (let i = 0; i < firstDayIndex; i++) {
        const emptyCell = document.createElement('div');
        emptyCell.className = 'day empty';
        grid.appendChild(emptyCell);
      }
-     // Días del 1 al 31
      for (let day = 1; day <= daysInOctober; day++) {
        const dayCell = document.createElement('div');
        dayCell.className = 'day';
-       // Lógica para determinar si el día ya pasó
        const dayDate = new Date(TARGET_YEAR, TARGET_MONTH, day, 23, 59, 59);
        const isPast = now > dayDate;
        if (day === TARGET_DAY) {
-         // Día especial de cumpleaños
          dayCell.classList.add('birthday');
          dayCell.innerHTML = `
 <span class="heart-bg">❤️</span>
@@ -468,24 +371,19 @@
          `;
        } else {
          dayCell.textContent = day;
-         if (isPast) {
-           dayCell.classList.add('crossed');
-         }
+         if (isPast) dayCell.classList.add('crossed');
        }
        grid.appendChild(dayCell);
      }
    }
-   // 2. CONTADOR REGRESIVO
    function updateCountdown() {
      const now = new Date().getTime();
      const distance = targetDate - now;
      const timerBox = document.getElementById('timerBox');
      const bdayAlert = document.getElementById('bdayAlert');
-     // Si ya es el día o fecha posterior
      if (distance <= 0) {
        timerBox.style.display = 'none';
        bdayAlert.style.display = 'block';
-       // Disparar confeti y música si es el día de cumpleaños
        triggerBirthdayCelebration();
        return;
      }
@@ -502,57 +400,14 @@
    function triggerBirthdayCelebration() {
      if (celebrationTriggered) return;
      celebrationTriggered = true;
-     // Lanzar confeti continuo
      const end = Date.now() + (15 * 1000);
      const colors = ['#ff4d6d', '#ff758f', '#ffccd5', '#ffd166', '#a0c4ff'];
      (function frame() {
-       confetti({
-         particleCount: 3,
-         angle: 60,
-         spread: 55,
-         origin: { x: 0 },
-         colors: colors
-       });
-       confetti({
-         particleCount: 3,
-         angle: 120,
-         spread: 55,
-         origin: { x: 1 },
-         colors: colors
-       });
-       if (Date.now() < end) {
-         requestAnimationFrame(frame);
-       }
+       confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0 }, colors: colors });
+       confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1 }, colors: colors });
+       if (Date.now() < end) requestAnimationFrame(frame);
      }());
-     // Intentar reproducir música automáticamente
-     playAudio();
    }
-   // 3. CONTROL DE MÚSICA
-   const audio = document.getElementById('mananitasAudio');
-   const musicBtn = document.getElementById('musicToggleBtn');
-   const musicIcon = document.getElementById('musicIcon');
-   const musicText = document.getElementById('musicText');
-   function playAudio() {
-     audio.play().then(() => {
-       musicIcon.textContent = '⏸️';
-       musicText.textContent = 'Pausar';
-     }).catch(() => {
-       // En navegadores modernos requiere interacción de clic para sonar
-       musicText.textContent = 'Tocar Mañanitas';
-     });
-   }
-   function toggleAudio() {
-     if (audio.paused) {
-       playAudio();
-       // Lanza una ráfaga de confeti al activar la música
-       confetti({ particleCount: 60, spread: 70, origin: { y: 0.8 } });
-     } else {
-       audio.pause();
-       musicIcon.textContent = '▶️';
-       musicText.textContent = 'Las Mañanitas';
-     }
-   }
-   // 4. CORAZONES FLOTANTES DE FONDO
    function createBackgroundHearts() {
      const bg = document.getElementById('bgHearts');
      const hearts = ['🌸', '💖', '✨', '💕', '🎈'];
@@ -566,7 +421,6 @@
        bg.appendChild(heart);
      }
    }
-   // Inicialización al cargar la página
    window.addEventListener('DOMContentLoaded', () => {
      buildCalendar();
      updateCountdown();
